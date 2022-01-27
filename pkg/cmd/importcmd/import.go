@@ -733,14 +733,14 @@ func (o *ImportOptions) DiscoverGit() error {
 	// lets prompt the user to initialise the Git repository
 	if !o.BatchMode {
 		o.GetReporter().Trace("The directory %s is not yet using git", termcolor.ColorInfo(dir))
-
-		flag, err := o.Input.Confirm("Would you like to initialise git now?", true, "We need to initialise git in the directory to continue")
-		if err != nil {
-			return errors.Wrapf(err, "failed to confirm git initialise")
-		}
-		if !flag {
-			return fmt.Errorf("please initialise git yourself then try again")
-		}
+		// TODO: AAA
+		// flag, err := o.Input.Confirm("Would you like to initialise git now?", true, "We need to initialise git in the directory to continue")
+		// if err != nil {
+		// 	return errors.Wrapf(err, "failed to confirm git initialise")
+		// }
+		// if !flag {
+		// 	return fmt.Errorf("please initialise git yourself then try again")
+		// }
 	}
 	o.InitialisedGit = true
 	err := gitclient.Init(o.Git(), dir)

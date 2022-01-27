@@ -147,7 +147,7 @@ func (model *QuickstartModel) CreateSurvey(filter *QuickstartFilter, batchMode b
 	if len(names) == 0 {
 		return nil, fmt.Errorf("no quickstarts match filter")
 	}
-	answer := ""
+	answer := "aspnet-app"
 	if len(names) == 1 {
 		// if there's only a single option, use it
 		answer = names[0]
@@ -155,11 +155,12 @@ func (model *QuickstartModel) CreateSurvey(filter *QuickstartFilter, batchMode b
 		// should not prompt for selection in batch mode so return an error
 		return nil, fmt.Errorf("more than one quickstart matches the current filter options. Try filtering based on other criteria (eg. Owner or Text): %v", names)
 	} else {
-		var err error
-		answer, err = i.PickNameWithDefault(names, "select the quickstart you wish to create:", answer, "you need to pick the quickstart project to start from")
-		if err != nil {
-			return nil, errors.Wrapf(err, "failed to pick quickstart")
-		}
+		// TODO: AAA
+		// var err error
+		// answer, err = i.PickNameWithDefault(names, "select the quickstart you wish to create:", answer, "you need to pick the quickstart project to start from")
+		// if err != nil {
+		// 	return nil, errors.Wrapf(err, "failed to pick quickstart")
+		// }
 	}
 
 	if answer == "" {
