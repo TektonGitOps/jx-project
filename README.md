@@ -63,3 +63,42 @@ For those of you who know [Jenkins X](https://jenkins-x.io/) and have used [jx i
   * regular Jenkins import where a Multi Branch Project is used and Jenkins processes the webhooks
   * ChatOps mode: we use [lighthouse](https://github.com/jenkins-x/lighthouse) to handle the webhooks and ChatOps and then when triggered we trigger regular pipelines inside the Jenkins server 
 * if your repository contains a `Jenkinsfile` and you choose to import into a Jenkins server we don't run the build packs and generate a `Dockerfile`, helm chart or `jenkins-x.yml`
+
+
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch file",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/main.go",
+            "args": [
+                "quickstart",
+                "--git-username",
+                "ySHOQNJyGk",
+                "--git-token",
+                "5ecc128b6f0f551a0969f663a8d52cc51f63ce9f",
+                "--org",
+                "tw-test",
+                "--name",
+                "jx-test-a1",
+                "--import-commit-message",
+                "hello world",
+                "--pack",
+                "csharp",
+                "--no-collaborator",
+                "true",
+                "--git-server",
+                "https://e.coding.net/open-api",
+                "--git-kind",
+                "coding"
+            ]
+        }
+
+    ]
+}
