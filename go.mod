@@ -40,8 +40,10 @@ replace (
 	// override the go-scm from tekton
 	github.com/jenkins-x/go-scm => /Users/haibo.wang1/code/jx/go-scm
 	github.com/jenkins-x-plugins/jx-promote => /Users/haibo.wang1/code/jx/jx-promote
+	github.com/jenkins-x-plugins/jx-gitops => /Users/haibo.wang1/code/jx/jx-gitops
+
 	// github.com/jenkins-x/go-scm => github.com/jenkins-x/go-scm v1.10.11
-	github.com/jenkins-x/jx-helpers/v3 => github.com/jenkins-x/jx-helpers/v3 v3.1.1
+	github.com/jenkins-x/jx-helpers/v3 => /Users/haibo.wang1/code/jx/jx-helpers
 	// for the PipelineRun debug fix see: https://github.com/tektoncd/pipeline/pull/4145
 	github.com/tektoncd/pipeline => github.com/jstrachan/pipeline v0.21.1-0.20210811150720-45a86a5488af
 	k8s.io/api => k8s.io/api v0.20.7
